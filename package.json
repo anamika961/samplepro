@@ -1,0 +1,19 @@
+{
+    "name": "project5",
+    "version": "1.0.0",
+    "description": "npm initialization",
+    "main": "server.js",
+    "scripts": {
+        "test": "test",
+        "start": "nodemon server.js"
+    },
+    "author": "Anamika",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.14"
+    },
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.1"
+    }
+}

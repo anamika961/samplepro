@@ -1,0 +1,42 @@
+<%- include('../Includes/header.ejs') %>
+    <title>
+        <%=title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+
+    <body>
+        <%- include('../Includes/navigation.ejs') %>
+            <br>
+            <%if(productdata.length>0){%>
+
+                <div class="row">
+                    <%for(let i of productdata){%>
+                        <div class="col-md-4 col-sm-6 col-lg-4">
+                            <div class="card" style="width: 19rem; height: 100%">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Product Id:
+                                        <%=i.productId%>
+                                    </h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Product Name:
+                                        <%=i.productname%>
+                                    </h6>
+                                    <p class="card-text">Product Price:
+                                        <%=i.productprice%>
+                                    </p>
+                                </div>
+                            </div>
+                            <%}%>
+                        </div>
+                        <%}else{%>
+                            <h1>data not found </h1>
+                            <%} %>
+
+
+                </div>
+
+                }
+
+
+                <%- include('../Includes/footer.ejs') %>

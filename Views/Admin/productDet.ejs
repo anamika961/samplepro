@@ -1,0 +1,34 @@
+<%- include('../Includes/header.ejs') %>
+    <title>
+        <%=title %>
+    </title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    </head>
+
+    <body>
+        <%- include('../Includes/navigation.ejs') %>
+            <div class="mystyle">
+                <table border="5">
+                    <tr>
+                        <th class="table_style">Product ID</th>
+                        <th class="table_style">Product Name</th>
+                        <th class="table_style">Product Price</th>
+                    </tr>
+
+                    <% for (var i = 0; i < productdata.length;  i++) { %>
+                        <tr>
+                            <td class="table_design">
+                                <%= productdata[i].productId %>
+                            </td>
+                            <td class="table_design">
+                                <%= productdata[i].productname %>
+                            </td>
+                            <td class="table_design">
+                                <%= productdata[i].productprice %>
+                            </td>
+                        </tr>
+                        <% } %>
+                </table>
+
+            </div>
+            <%- include('../Includes/footer.ejs') %>

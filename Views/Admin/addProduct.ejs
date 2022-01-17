@@ -1,0 +1,23 @@
+<%- include('../Includes/header.ejs') %>
+    <title>
+        <%=title_page%>
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    </head>
+
+    <body>
+        <%- include('../Includes/navigation.ejs') %>
+            <div>
+                <form method="POST" action="/postValue">
+                    <label for="pid">Product Id:</label><br>
+                    <input type="text" id="pid" class="in" name="pid" value=""><br>
+                    <label for="pname">Product Name:</label><br>
+                    <input type="text" id="pname" class="in" name="pname" value=""><br>
+                    <label for="pprice">Product Price:</label><br>
+                    <input type="text" id="pprice" class="in" name="pprice" value=""><br>
+                    <input type="submit" id="butn" class="btn" value="submit">
+                </form>
+            </div>
+            <%- include('../Includes/footer.ejs') %>
